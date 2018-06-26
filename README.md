@@ -20,3 +20,9 @@ just copied to the S3 bucket when a new change is requested and an
 invalidation is performed against the Cloudfont cache to get the change out
 to the users.
 
+## TODO
+
+ * Better performance on mobile.
+ * Automatic building of 3 versions.
+ * Better styling.
+
