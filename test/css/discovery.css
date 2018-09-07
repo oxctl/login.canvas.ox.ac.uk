@@ -29,7 +29,6 @@ div.logo {
     max-height: 87px;
     overflow: hidden;
     background: white url("../img/ox_brand4_rev.gif") no-repeat -0px 0px;
-    margin: 16px;
     display: inline-block;
 }
 
@@ -56,7 +55,8 @@ div#canvaslogo {
 h1 {
     text-align: center;
     font-weight: 100;
-    margin-bottom: 48px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 div.canvas-login {
@@ -65,6 +65,8 @@ div.canvas-login {
     max-width: 400px;
     border-radius: 4px;
     border: 1px solid #f3f3f3;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 769px) {
@@ -88,6 +90,10 @@ div.canvas-login .canvas-login-choices {
     width: 100%;
     text-align: center;
     position: relative;
+}
+
+div.canvas-login-routes a {
+  display: inline-block;
 }
 
 @media screen and (min-width: 769px) {
@@ -128,16 +134,34 @@ div.canvas-login .canvas-login-choices {
 
 footer {
     font-size: 0.8rem;
-    margin-top: 32px;
-    margin-bottom: 0px;
 }
 
 footer ul {
-    padding: 16px;
+  padding-inline-start: 0;
 }
 
 footer li {
     display: inline;
     list-style: none;
     padding: 8px;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
 }

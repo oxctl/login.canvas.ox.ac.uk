@@ -8,6 +8,11 @@
   <title>Welcome to Canvas - University of Oxford</title>
   <link rel="stylesheet" href="./css/discovery.css">
   <script src="./js/scripts.js"></script>
+  <style>
+    .d-none { 
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,19 +24,19 @@
     </header>
     <div class="canvas-login-choices">
       <h1>Canvas Login</h1>
-      <!--
-      <div class="alert alert-warning">
+      <div class="alert alert-warning d-none">
 	  <strong>Warning:</strong> Indicates a warning that might need attention.
       </div>
                     
-      <div class="alert alert-danger">
+      <div id="error-message" class="alert alert-danger d-none">
 	  <strong>Sorry... </strong> Canvas does not have an account for user: aproject@ox.ac.uk!
       </div>
-      -->
 
-      <a href="https://universityofoxford.test.instructure.com/login/saml" role="button" class="btn btn-outline btn-lg">Oxford Users</a>
+      <div class="canvas-login-routes">
+	<a href="https://universityofoxford.test.instructure.com/login/saml" role="button" class="btn btn-outline btn-lg">Oxford Users</a>
 
-      <a href="https://universityofoxford.test.instructure.com/login/canvas" role="button" class="btn btn-outline btn-lg">Other Users</a>
+	<a href="https://universityofoxford.test.instructure.com/login/canvas" role="button" class="btn btn-outline btn-lg">Other Users</a>
+      </div>
 
     </div>
     <!-- /canvas-login-choices -->
