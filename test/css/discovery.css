@@ -28,7 +28,7 @@ div.logo {
     max-width: 87px;
     max-height: 87px;
     overflow: hidden;
-    background: white url("../img/ox_brand4_rev.gif") no-repeat -0px 0px;
+    background: transparent url("../img/ox_brand4_rev.gif") no-repeat -0px 0px;
     display: inline-block;
 }
 
