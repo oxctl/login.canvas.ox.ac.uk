@@ -22,7 +22,6 @@ to the users.
 
 ## TODO
 
- * Better performance on mobile.
  * Automatic building of 3 versions.
- * Better styling.
+ * CSS Invalidation
 
