@@ -138,11 +138,14 @@ footer {
 
 footer ul {
   padding-inline-start: 0;
+  padding: 8px 0px;
+
 }
 
 footer li {
     display: inline;
     list-style: none;
+    line-height: 1.4rem;
     padding: 8px;
 }
 
