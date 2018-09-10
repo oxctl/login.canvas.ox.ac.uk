@@ -1,153 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Canvas Login - University of Oxford</title>
-    <link rel="stylesheet" href="lib/bootstrap-4.1.1/css/bootstrap.min.css">
-  <script>
 
-    // Hostnames we allow for displaying message
-    var allowed_referrers = ["idp.shibboleth.ox.ac.uk"];
-
-    var ready = function(fn) {
-      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-	fn();
-      } else {
-	document.addEventListener('DOMContentLoaded', fn);
-      }
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <title>Login to Canvas - University of Oxford</title>
+  <link rel="stylesheet" href="./css/discovery.css">
+  <script src="./js/scripts.js"></script>
+  <style>
+    .d-none { 
+      display: none;
     }
-
-    var getParameterByName = function(name, url) {
-	if (!url) url = window.location.href;
-	name = name.replace(/[\[\]]/g, "\\$&");
-	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	    results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return '';
-	return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    var getLocation = function(href) {
-      var l = document.createElement("a");
-      l.href = href;
-      return l;
-    };
-
-    // This prevents arbitrary hosts from displaying messages.
-    var checkAllowed = function(referrer) {
-      // For testing we manually override the referrer
-      // referrer = "http://idp.shibboleth.ox.ac.uk/";
-      if (referrer) {
-	var ref_hostname = getLocation(referrer).hostname;
-        return allowed_referrers.indexOf(ref_hostname) != -1;
-      }
-      return false;
-
-    }
-
-
-    if (checkAllowed(document.referrer)) {
-      var message = getParameterByName("message");
-      if (message) {
-	ready(function() {
-	  var error_message = document.getElementById("error-message");
-	  error_message.classList.remove("d-none");
-	  // This prevents XSS as all text is escaped
-	  var text_message = document.createTextNode("❌ "+ message);
-	  error_message.appendChild(text_message);
-	});
-      }
-    }
-
-  </script>
-    <style type="text/css">
-    body {
-      background-image: linear-gradient(transparent, transparent 80%, #eeeeee), url(./images/11370176673_a1ddb253ac_o.jpg);
-      background-size: cover;
-      background-attachment: fixed;
-      font-family: 'Lato', sans-serif;
-      min-height: 100vh;
-
-    }
-    .choice-page {
-      display: flex;
-      justify-content: center;
-    }
-    .choice-box {
-      background-color: #002147;
-      color: #fff;
-      padding: 1em;
-      margin: 1em;
-      border-radius: 5px;
-      border-color: grey;
-      max-width: 600px;
-    }
-    .brand-image {
-      border: white solid 1px;
-      width: 84px;
-      height: 84px;
-    }
-    footer {
-      font-size: 80%;
-    }
-    footer a {
-      text-decoration: underline;
-    }
-    footer a:hover {
-      text-decoration: none;
-    }
-
   </style>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  </head>
-  <body>
-    <div class="choice-page">
-    <div class="container choice-box border">
-      <div class="row justify-content-center">
-	<div class="col-sm-12 text-center">
-	  <a href="https://www.ox.ac.uk">
-	    <img class="float-left brand-image" src="./images/logo.svg" alt="University of Oxford Logo">
-	  </a>
-	</div>
+</head>
+
+<body>
+  <div class="canvas-login ">
+    <header>
+      <div class="logo" id="oxlogo">
+        <span>University of Oxford</span>
       </div>
-      <div class="row justify-content-center">
-	<div class="col-sm-12 my-3 text-center">
-	  <h1>Canvas Login</h1>
-	</div>
+    </header>
+    <div class="canvas-login-choices">
+      <h1>Canvas Login</h1>
+      <div class="alert alert-warning d-none">
+	  <strong>Warning:</strong> Indicates a warning that might need attention.
       </div>
-      <div class="alert alert-danger d-none" id="error-message" role="alert">
+                    
+      <div id="error-message" class="alert alert-danger d-none">
       </div>
-      <div class="row justify-content-center">
-	<div class="col-sm-6 text-center my-3">
-	    <a href="https://universityofoxford.beta.instructure.com/login/saml" role="button" class="btn btn-outline-light btn-lg login-link">
-	      Oxford Users
-	    </a>
-	</div>
-	<div class="col-sm-6 text-center my-3">
-	    <a href="https://universityofoxford.beta.instructure.com/login/canvas" role="button" class="btn btn-outline-light btn-lg login-link">
-	      Other Users
-	    </a>
-	  </form>
-	</div>
-	</div>
-	<footer>
-	<div class="row mt-3">
-	  <div class="col-sm-12 text-center">
-	  <ul class="list-inline">
-	    <li class="list-inline-item">
-	      <a href="http://help.instructure.com/" class="text-white">Help</a></li>
-	    <li class="list-inline-item">
-	      <a href="http://www.admin.ox.ac.uk/statutes/regulations/196-052.shtml" class="text-white">IT Regulations</a>
-	    </li>
-	    <li class="list-inline-item">
-	      <a href="https://www.digitaleducation.ox.ac.uk/canvas-oxford" class="text-white">About Canvas@Oxford</a>
-	    </li>
-	  </ul>
-	  </div>
-	</footer>
+
+      <div class="canvas-login-routes">
+	<a href="https://universityofoxford.beta.instructure.com/login/saml" role="button" class="btn btn-outline btn-lg">Oxford Users</a>
+
+	<a href="https://universityofoxford.beta.instructure.com/login/canvas" role="button" class="btn btn-outline btn-lg">Other Users</a>
       </div>
+
     </div>
-    </div>
-  </body>
+    <!-- /canvas-login-choices -->
+    <footer>
+      <ul>
+        <li>
+          <a href="http://help.instructure.com/">Help</a>
+        </li>
+        <li>
+          <a href="http://www.admin.ox.ac.uk/statutes/regulations/196-052.shtml">IT Regulations</a>
+        </li>
+        <li>
+          <a href="https://www.digitaleducation.ox.ac.uk/canvas-oxford">About Canvas@Oxford</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!--  /canvas-login  -->
+</body>
+
 </html>
