@@ -69,6 +69,19 @@ div.canvas-login {
     box-sizing: border-box;
 }
 
+div.login-option {
+  display: inline-block;
+  border: 1px white solid;
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em;
+  flex: 0 1;
+}
+
+div.login-help {
+  font-size: small;
+}
+
 @media screen and (min-width: 769px) {
     div.canvas-login {
         max-width: 600px;
@@ -92,8 +105,15 @@ div.canvas-login .canvas-login-choices {
     position: relative;
 }
 
+div.canvas-login-routes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 div.canvas-login-routes a {
   display: inline-block;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 769px) {

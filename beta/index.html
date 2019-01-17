@@ -31,11 +31,18 @@
 	<div id="error-message" class="alert alert-danger d-none">
 	</div>
 
-      <div class="canvas-login-routes">
-	<a href="https://universityofoxford.beta.instructure.com/login/saml" role="button" class="btn btn-outline btn-lg">Oxford Users</a>
+	<div class="canvas-login-routes">
+	  <div class="login-option">
+	    <a href="https://universityofoxford.beta.instructure.com/login/saml" role="button" class="btn btn-outline btn-lg" aria-label="Oxford Users Login" aria-describedby="login-help-oxford">Oxford Users</a>
+	    <div id="login-help-oxford" class="login-help">For users with an <a href="https://www.it.ox.ac.uk/welcome/sso">Oxford SSO</a> account. The username is normally 8 character. e.g. abcd0123</div>
+	  </div>
 
-	<a href="https://universityofoxford.beta.instructure.com/login/canvas" role="button" class="btn btn-outline btn-lg">Other Users</a>
-      </div>
+	  <div class="login-option">
+	    <a href="https://universityofoxford.beta.instructure.com/login/canvas" role="button" class="btn btn-outline btn-lg" aria-label="Other Users Login" aria-describedby="login-help-non-oxford">Other Users</a>
+	    <div id="login-help-non-oxford" class="login-help">For non-Oxford users. The username is normally an email address. e.g. jane.doe@gmail.com</div>
+	  </div>
+
+	</div>
 
     </div>
     <!-- /canvas-login-choices -->
