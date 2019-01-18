@@ -74,7 +74,8 @@ div.login-option {
   border-radius: 4px;
   padding: 1em;
   margin: 1em;
-  flex: 0 1;
+  /* IE 11 requires three flex values. */
+  flex: 1 0 35%;
 }
 
 div.login-help {
