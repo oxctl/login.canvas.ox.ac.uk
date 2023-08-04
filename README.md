@@ -14,11 +14,15 @@ to users.
 
 ## Deployment
 
-This set of pages is deployed to an AWS S3 bucket that is served up by AWS
-Cloudfront to allow TLS on a custom domain. At the moment this content is
-just copied to the S3 bucket when a new change is requested and an 
-invalidation is performed against the Cloudfont cache to get the change out
-to the users.
+This set of pages is deployed to [Cloudflare](https://dash.cloudflare.com/1adb0f307cf4b14f583113668c4cd5fa/pages/view/login-canvas-ox-ac-uk)
+
+To release the latest code merge the master branch into the release branch. To do this locally run checkout the release
+branch, fetch the latest code from the origin and run:
+```shell
+git merge origin/master
+```
+
+To see what is about to go into a release you can preview the changes between [master and release](https://github.com/oxctl/login.canvas.ox.ac.uk/compare/release...master), then to double check a PR can be created to merge the changes, reviewed and merged (at which point the release branch is built and deployed).
 
 ## TODO
 
