@@ -1,8 +1,7 @@
 # login.canvas.ox.ac.uk site
 
 This is the discovery page for https://canvas.ox.ac.uk/ At the moment is't as 
-simple as possible. We have 3 copies, one for each environment. There is no
-magic about how each copy is built and at the moment it's a manual process.
+simple as possible.
 
 ## Errors
 
@@ -29,6 +28,7 @@ To see what is about to go into a release you can preview the changes between [m
 
 ## TODO
 
- * Automatic building of 3 versions.
- * CSS Invalidation
+ * Automatic building of the project
+ * Make sure the .github folder contents are not served.
+ * CSS and JSS Invalidation
 
