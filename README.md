@@ -1,8 +1,7 @@
 # login.canvas.ox.ac.uk site
 
 This is the discovery page for https://canvas.ox.ac.uk/ At the moment is't as 
-simple as possible. We have 3 copies, one for each environment. There is no
-magic about how each copy is built and at the moment it's a manual process.
+simple as possible.
 
 ## Errors
 
@@ -16,8 +15,11 @@ to users.
 
 This set of pages is deployed to [Cloudflare](https://dash.cloudflare.com/1adb0f307cf4b14f583113668c4cd5fa/pages/view/login-canvas-ox-ac-uk)
 
-To release the latest code merge the master branch into the release branch. To do this locally run checkout the release
-branch, fetch the latest code from the origin and run:
+To release the latest code merge the master branch into the release branch Cloudflare will then deploy this to production.
+The best way to do this is to create a PR from `master` to `release`, this allows you to check what's going to be released.
+There is a GitHub action that can be manually run to do this.
+
+Alternatively to do this locally run checkout the release branch, fetch the latest code from the origin and run:
 ```shell
 git merge origin/master
 ```
@@ -26,6 +28,7 @@ To see what is about to go into a release you can preview the changes between [m
 
 ## TODO
 
- * Automatic building of 3 versions.
- * CSS Invalidation
+ * Automatic building of the project
+ * Make sure the .github folder contents are not served.
+ * CSS and JSS Invalidation
 
