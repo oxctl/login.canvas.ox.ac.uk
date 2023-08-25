@@ -1,5 +1,8 @@
 // Hostnames we allow for displaying message
-var allowed_referrers = ["idp.shibboleth.ox.ac.uk"];
+var allowed_referrers = [
+    "idp.shibboleth.ox.ac.uk",
+    "login.microsoftonline.com"
+];
 
 var ready = function (fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
