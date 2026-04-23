@@ -13,3 +13,6 @@
     Cache-Control: max-age=604800
 /*.gif
     Cache-Control: max-age=604800
+# Require HTTPS for all requests to this domain for 1 year
+/*
+    Strict-Transport-Security: max-age=31536000
