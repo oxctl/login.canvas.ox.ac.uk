@@ -44,7 +44,7 @@ if (checkAllowed(document.referrer)) {
     if (message) {
         ready(function () {
             var error_message = document.getElementById("error-message");
-            error_message.classList.remove("d-none");
+            error_message.hidden = false
             // This prevents XSS as all text is escaped
             var text_message = document.createTextNode("❌ " + message);
             error_message.appendChild(text_message);

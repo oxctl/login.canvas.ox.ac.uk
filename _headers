@@ -14,5 +14,7 @@
 /*.gif
     Cache-Control: max-age=604800
 # Require HTTPS for all requests to this domain for 1 year
+# We also set a Content-Security-Policy to only allow resources from the same origin, which helps prevent XSS attacks
 /*
     Strict-Transport-Security: max-age=31536000
+    Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'
